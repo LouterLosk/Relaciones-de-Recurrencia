@@ -1,7 +1,8 @@
-#include "funciones.h"
+#include "funciones.h" //sirve para llamar lo que esta en el archivo funciones.h
 
 int main() 
 {
+    //declaracion de variables
     int opcion;
     char cadena[100];
     int numero;
@@ -9,6 +10,7 @@ int main()
     do {
         menu();
         scanf("%d", &opcion);
+        //Eleccion de que se quiere hacer en el codigo
         switch(opcion){
                     case 1:
                         printf("Ingrese una cadena: ");
@@ -18,7 +20,7 @@ int main()
                         opcion = 4;
                         break;
                     case 2:
-                        do
+                        do  //Verificacon de que el dato sea positivo
                         {
                             printf("Ingrese un número: ");
                             scanf("%d", &numero);
@@ -27,7 +29,7 @@ int main()
                         opcion = 4;
                         break;
                     case 3:
-                        do
+                        do //Verificacon de que el dato sea positivo
                         {
                             printf("Ingrese el número hasta el cual calcualar de Fibonacci: ");
                             scanf("%d", &numero);
@@ -35,11 +37,11 @@ int main()
                         generarFibonacci(numero);
                         opcion = 4;
                         break;
-                    case 4:
+                    case 4: //Se agrego esta opccion por si no deseas hacer nada
                         printf("Saliendo...\n");
                         break;
                     default:
-                        printf("Opción no válida. Intente de nuevo.\n");
+                        printf("Opción no válida. Intente de nuevo.\n");//Verificacon de que el dato este entre las opciones
                 }  
     } while(opcion != 4);
     return 0;

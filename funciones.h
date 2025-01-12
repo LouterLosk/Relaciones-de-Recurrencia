@@ -2,7 +2,8 @@
 #include <string.h>
 
 void menu();
-void menu(){
+void menu() // se encarga de presentar el menu
+{
     printf("\nMenu Interactivo\n");
         printf("1. Invertir una cadena\n");
         printf("2. Calcular el factorial de un número\n");
