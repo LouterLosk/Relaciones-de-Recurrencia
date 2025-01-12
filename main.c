@@ -1,8 +1,5 @@
 #include "funciones.h"
 
-
-
-
 int main() 
 {
     int opcion;
@@ -21,18 +18,23 @@ int main()
                         opcion = 4;
                         break;
                     case 2:
-                        printf("Ingrese un número: ");
-                        scanf("%d", &numero);
+                        do
+                        {
+                            printf("Ingrese un número: ");
+                            scanf("%d", &numero);
+                        } while (numero < 0);
                         printf("Factorial de %d es: %d\n", numero, factorial(numero,numero));
                         opcion = 4;
                         break;
-                    /*case 3:
-                        printf("Ingrese el número hasta el cual calcualar de Fibonacci: ");
-                        scanf("%d", &numero);
-                        printf("Sucesión de Fibonacci: ");
-                        generarFibonacci(numero, 0, 1);
-                        printf("\n");
-                        break;*/
+                    case 3:
+                        do
+                        {
+                            printf("Ingrese el número hasta el cual calcualar de Fibonacci: ");
+                            scanf("%d", &numero);
+                        } while (numero < 0);
+                        generarFibonacci(numero);
+                        opcion = 4;
+                        break;
                     case 4:
                         printf("Saliendo...\n");
                         break;

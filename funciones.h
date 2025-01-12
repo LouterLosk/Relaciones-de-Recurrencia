@@ -11,6 +11,7 @@ void menu(){
         printf("Opción: ");
 }
 
+//Invertir una cadena ingresada por el usuario.
 // Función para invertir una cadena
 void Invertir(char cadena[],int inicio,int longitud);
 void Invertir(char cadena[], int inicio, int longitud) 
@@ -28,7 +29,7 @@ void Invertir(char cadena[], int inicio, int longitud)
 }
 
 
-
+//Calcular el factorial de un número entero positivo ingresado por el usuario.
 // Función para calcular el factorial de un numero n
 int factorial(int n,int i);
 int factorial(int n,int i){
@@ -42,4 +43,22 @@ int factorial(int n,int i){
     return factorial(n,i);
 }
 
-    
+
+//Calcular el factorial de un número entero positivo ingresado por el usuario.
+// Función recursiva para calcular el n-ésimo número de Fibonacci
+int fibonacci(int n);
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// Función para generar la sucesión de Fibonacci hasta n
+void generarFibonacci(int n) {
+    printf("Sucesión de Fibonacci hasta %d: ", n);
+    for (int i = 0; i <= n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+    printf("\n");
+}
