@@ -15,7 +15,7 @@ int main()
                     case 1:
                         printf("Ingrese una cadena: ");
                         scanf("%s", cadena);
-                        Invertir(cadena,0,strlen(cadena)-1);
+                        Invertir(cadena,0,strlen(cadena));
                         printf("Cadena invertida: %s\n", cadena);
                         opcion = 4;
                         break;
