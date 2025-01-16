@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+// Códigos ANSI para colores
+#define RESET "\033[0m"         // Restablece colores
+#define RED "\033[31m"          // Texto rojo
+#define GREEN "\033[32m"        // Texto verde
+#define YELLOW "\033[33m"       // Texto amarillo
+#define BLUE "\033[34m"         // Texto azul
+#define MAGENTA "\033[35m"      // Texto magenta
+#define CYAN "\033[36m"         // Texto cian
+
+int main() {
+    printf(RED "Este texto es rojo\n" RESET);
+    printf(GREEN "Este texto es verde\n" RESET);
+    printf(YELLOW "Este texto es amarillo\n" RESET);
+    printf(BLUE "Este texto es azul\n" RESET);
+    printf(MAGENTA "Este texto es magenta\n" RESET);
+    printf(CYAN "Este texto es cian\n" RESET);
+    printf("Este texto tiene el color predeterminado\n");
+
+    return 0;
+}
+
+
+
+##<string.h>
+
+strcpy ( c1, c2 ); Copia c2 en c1
+strcat ( c1, c2 ); Añade c2 al final de c1
+int strlen ( cadena ); Devuelve la longitud de la cadena
+int strcmp ( c1, c2 ); Devuelve cero si c1 es igual a c2;
+no-cero en caso contrario
