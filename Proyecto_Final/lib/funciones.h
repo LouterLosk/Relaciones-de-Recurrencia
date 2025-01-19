@@ -9,7 +9,7 @@
 void Matriz1(int nombre[4][3]);
 void imprimirExpresion(int nombre[4][3], int *cont);
 void IMPRIMIR(int matriz[4][3]);
-int selccion(int Contador[4]);
+int selccion(int Contador[4], int term);
 void remplazar2(int matriz1[4][3], int matriz2[4][3]);
 void remplazar3(int matriz1[4][3], int matriz2[4][3],int matriz3[4][3]);
 void remplazar4(int matriz1[4][3], int matriz2[4][3],int matriz3[4][3],int matriz4[4][3]);
@@ -64,11 +64,12 @@ void Matriz1(int nombre[4][3]){
 
 void imprimirExpresion(int nombre[4][3], int *cont) {
     int firstTerm = 1;
-
+    int term = 0;
     if (nombre[0][2] == 1) {
         printf("A'*B'");
         firstTerm = 0;
         cont[0] = 1;
+        term++;
     }
     if (nombre[1][2] == 1) {
         if (!firstTerm) {
@@ -77,6 +78,7 @@ void imprimirExpresion(int nombre[4][3], int *cont) {
         printf("A'*B");
         firstTerm = 0;
         cont[1] = 1;
+        term++;
     }
     if (nombre[2][2] == 1) {
         if (!firstTerm) {
@@ -85,6 +87,7 @@ void imprimirExpresion(int nombre[4][3], int *cont) {
         printf("A*B'");
         firstTerm = 0;
         cont[2] = 1;
+        term++;
     }
     if (nombre[3][2] == 1) {
         if (!firstTerm) {
@@ -92,14 +95,15 @@ void imprimirExpresion(int nombre[4][3], int *cont) {
         }
         printf("A*B");
         cont[3] = 1;
+        term++;
     }
     printf("\n");
-    selccion(cont);
+    selccion(cont, term);
 }
 
 
 
-int selccion(int Contador[4]) {
+int selccion(int Contador[4], int term) {
     int A[4][3] = {
         {1, 1, 1},
         {1, 0, 0},
@@ -125,22 +129,83 @@ int selccion(int Contador[4]) {
         {1, 1, 1}
     };
 
-    if (Contador[0]) {
+    if (Contador[0] == 1 && term == 1) {
         printf("Seleccionaste A'*B':\n");
         IMPRIMIR(A);
     }
-    if (Contador[1]) {
-        printf("Seleccionaste A'*B:\n");
+     if (Contador[1] == 1 && term == 1) {
+        printf("Seleccionaste A'*B':\n");
         IMPRIMIR(B);
     }
-    if (Contador[2]) {
+    if (Contador[2] == 1 && term == 1) {
         printf("Seleccionaste A*B':\n");
         IMPRIMIR(C);
     }
-    if (Contador[3]) {
+    if (Contador[3] == 1 && term == 1) {
         printf("Seleccionaste A*B:\n");
         IMPRIMIR(D);
+
     }
+    //0
+    if (Contador[0] == 1 && Contador[1]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+     if (Contador[0] == 1 && Contador[2]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,C);
+    }
+     if (Contador[0] == 1 && Contador[3]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,D);
+    }
+    
+    //1
+    if (Contador[1] == 1 && Contador[0]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+     if (Contador[1] == 1 && Contador[2]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+     if (Contador[1] == 1 && Contador[3]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+
+    //2
+    if (Contador[2] == 1 && Contador[0]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+     if (Contador[2] == 1 && Contador[1]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+     if (Contador[2] == 1 && Contador[3]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+    
+    //3
+    if (Contador[3] == 1 && Contador[0]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+     if (Contador[3] == 1 && Contador[1]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+     if (Contador[3] == 1 && Contador[2]== 1 && term == 2){
+        printf("Seleccionaste A'*B' + A'*B:\n");
+        remplazar2(A,B);
+    }
+
+
+ 
+   
+    
 
 return 0;
 }
