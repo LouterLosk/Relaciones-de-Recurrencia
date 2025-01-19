@@ -4,7 +4,7 @@
 #define GREEN "\033[32m"
 #define RED "\033[31m"          // Texto rojo
 
-   
+//Calculo con 2 variables
 // Prototipos de las funciones
 void Matriz1(int nombre[4][3]);
 void imprimirExpresion(int nombre[4][3], int *cont);
@@ -125,69 +125,54 @@ int selccion(int Contador[4], int term) {
     };
 
     if (Contador[0] == 1 && term == 1) {
-        printf("Seleccionaste A'*B':\n");
         IMPRIMIR(A);
     }
      if (Contador[1] == 1 && term == 1) {
-        printf("Seleccionaste A'*B:\n");
         IMPRIMIR(B);
     }
     if (Contador[2] == 1 && term == 1) {
-        printf("Seleccionaste A*B':\n");
         IMPRIMIR(C);
     }
     if (Contador[3] == 1 && term == 1) {
-        printf("Seleccionaste A*B:\n");
         IMPRIMIR(D);
 
     }
     //Dos terminos
     if (Contador[0] == 1 && Contador[1]== 1 && term == 2){
-        printf("Seleccionaste A'*B' + A'*B:\n");
         remplazar2(A,B);
     }
      if (Contador[0] == 1 && Contador[2]== 1 && term == 2){
-        printf("Seleccionaste A'*B' + A*B':\n");
         remplazar2(A,C);
     }
      if (Contador[0] == 1 && Contador[3]== 1 && term == 2){
-        printf("Seleccionaste A'*B' + A*B:\n");
         remplazar2(A,D);
     }
      if (Contador[1] == 1 && Contador[2]== 1 && term == 2){
-        printf("Seleccionaste A'*B + A*B':\n");
         remplazar2(B,C);
     }
      if (Contador[1] == 1 && Contador[3]== 1 && term == 2){
-        printf("Seleccionaste A'*B + A*B:\n");
         remplazar2(B,D);
     }
     if (Contador[2] == 1 && Contador[3]== 1 && term == 2){
-        printf("Seleccionaste A*B' + A*B:\n");
         remplazar2(C,D);
     }
     
     //Tres terminos
     if (Contador[0] == 1 && Contador[1]== 1 && Contador[2]== 1 && term == 3){
-        printf("Seleccionaste A'*B' + A'*B + A*B':\n");
         remplazar3(A,B,C);
     }
     if (Contador[0] == 1 && Contador[1]== 1 && Contador[3]== 1 && term == 3){
-        printf("Seleccionaste A'*B' + A'*B + A*B:\n");
         remplazar3(A,B,D);
     }
     if (Contador[0] == 1 && Contador[2]== 1 && Contador[3]== 1 && term == 3){
-        printf("Seleccionaste A'*B' + A*B' + A*B:\n");
         remplazar3(A,C,D);
     }
     if (Contador[1] == 1 && Contador[2]== 1 && Contador[3]== 1 && term == 3){
-        printf("Seleccionaste A'*B + A*B' + A*B:\n");
         remplazar3(B,C,D);
     }
 
     //cuatro terminos
     if (Contador[0] == 1 && Contador[1]== 1 && Contador[2]== 1 && Contador[3]== 1 && term == 4){
-        printf("Seleccionaste A'*B' + A'*B + A*B' + A*B:\n");
         remplazar4(A,B,C,D);
     }
 return 0;

@@ -8,6 +8,8 @@
 #define MAGENTA "\033[35m"      // Texto magenta
 #define CYAN "\033[36m"         // Texto cian
 
+//Calculo con tres variables 
+
 void LeerMatriz2(int nombre[8][4]);  
 void IMPRIMIR2(int matriz[8][4]);
 void imprimirExpresion2(int nombre[8][4], int *cont);
