@@ -1,41 +1,45 @@
-#include "funciones.h"
+#include "./lib/funciones.h"
+
 
 
 
 int main() {
+    int cont [4] ={0};
     int nombre[4][3] = {
         {0,0,0},
         {0,1,0},
         {1,0,0},
-        {1,1,0}
+        {1,1,1}
+    };
+    int A[4][3] = { //A'*B'
+        {1,1,1},
+        {1,0,0},
+        {0,1,0},
+        {0,0,0}
+    };
+    int B[4][3] = { //A'*B
+        {1,0,0},
+        {1,1,1},
+        {0,0,0},
+        {0,1,0}
+    };
+    int C[4][3] = { //A*B'
+        {0,1,0},
+        {0,0,0},
+        {1,1,1},
+        {1,0,0}
+    };
+    int D[4][3] = { //A*B
+        {0,0,0},
+        {0,1,0},
+        {1,0,0},
+        {1,1,1}
     };
     Matriz1(nombre);
-
-    char cadena[6];
-        if(nombre[0][2] == 1){ 
-            printf("A'*B'\n"); 
-            sprintf(cadena, "A'*B'"); 
-            printf("%s\n", cadena); 
-            }  
-
-        if(nombre[1][2] == 1){   
-        printf("A'*B");
-        char cadena[] = "A'*B";
-        printf(" %c",cadena);
-        }  
-        if(nombre[2][2] == 1){
-        printf("A*B'");
-        } 
-        if(nombre[3][2] == 1){
-        printf("A*B\n");
-        }   
-    
-    
-    
-
-
     printf("\n");
     IMPRIMIR(nombre);
-    return 0;
+    printf("\n");
+    imprimirExpresion(nombre, cont);
+return 0;
 }
-
+    
