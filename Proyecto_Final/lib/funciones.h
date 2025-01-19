@@ -32,8 +32,6 @@ void IMPRIMIR(int matriz[4][3]) {
     }   
 }
 
-
-
 void Matriz1(int nombre[4][3]){
     // nombre[Fila][Columna]
     int S;    
@@ -60,7 +58,6 @@ void Matriz1(int nombre[4][3]){
     }
     }while (S != 0 && S != 1);
    }
-
 
 void imprimirExpresion(int nombre[4][3], int *cont) {
     int firstTerm = 1;
@@ -100,8 +97,6 @@ void imprimirExpresion(int nombre[4][3], int *cont) {
     printf("\n");
     selccion(cont, term);
 }
-
-
 
 int selccion(int Contador[4], int term) {
     int A[4][3] = {
@@ -198,8 +193,6 @@ int selccion(int Contador[4], int term) {
 return 0;
 }
 
-
-
 void remplazar2(int matriz1[4][3], int matriz2[4][3]){
 int matriz[4][6]= {0};
     for(int i = 0 ; i < 4 ; i++){
@@ -263,7 +256,6 @@ void remplazar3(int matriz1[4][3], int matriz2[4][3],int matriz3[4][3]){
 
     }
 }
-
 
 void remplazar4(int matriz1[4][3], int matriz2[4][3],int matriz3[4][3],int matriz4[4][3]){
 int matriz[4][6]= {0};
