@@ -8,15 +8,22 @@
 // Prototipos de las funciones
 void Matriz1(int nombre[4][3]);
 void imprimirExpresion(int nombre[4][3], int *cont);
-void IMPRIMIR(int matriz[4][3]);
+void imprimir(int matriz[4][3]);
 int selccion(int Contador[4], int term);
 void remplazar2(int matriz1[4][3], int matriz2[4][3]);
 void remplazar3(int matriz1[4][3], int matriz2[4][3],int matriz3[4][3]);
 void remplazar4(int matriz1[4][3], int matriz2[4][3],int matriz3[4][3],int matriz4[4][3]);
 
 
+void inicio(){
 
-void IMPRIMIR(int matriz[4][3]) {
+
+
+}
+
+
+
+void imprimir(int matriz[4][3]) {
     int j;
     printf("a b s\n");
     for (int i = 0; i < 4; i++) {
@@ -60,34 +67,34 @@ void Matriz1(int nombre[4][3]){
    }
 
 void imprimirExpresion(int nombre[4][3], int *cont) {
-    int firstTerm = 1;
+    int termino = 1;
     int term = 0;
     if (nombre[0][2] == 1) {
         printf("A'*B'");
-        firstTerm = 0;
+        termino = 0;
         cont[0] = 1;
         term++;
     }
     if (nombre[1][2] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A'*B");
-        firstTerm = 0;
+        termino = 0;
         cont[1] = 1;
         term++;
     }
     if (nombre[2][2] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A*B'");
-        firstTerm = 0;
+        termino = 0;
         cont[2] = 1;
         term++;
     }
     if (nombre[3][2] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A*B");
@@ -125,16 +132,16 @@ int selccion(int Contador[4], int term) {
     };
 
     if (Contador[0] == 1 && term == 1) {
-        IMPRIMIR(A);
+        imprimir(A);
     }
      if (Contador[1] == 1 && term == 1) {
-        IMPRIMIR(B);
+        imprimir(B);
     }
     if (Contador[2] == 1 && term == 1) {
-        IMPRIMIR(C);
+        imprimir(C);
     }
     if (Contador[3] == 1 && term == 1) {
-        IMPRIMIR(D);
+        imprimir(D);
 
     }
     //Dos terminos

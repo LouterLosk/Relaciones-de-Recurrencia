@@ -30,7 +30,7 @@ if (variables == 2){
         };
         Matriz1(nombre);
         printf("\n");
-        IMPRIMIR(nombre);
+        imprimir(nombre);
         printf("\n");
         imprimirExpresion(nombre, cont);
     }else if (variables == 3)
@@ -48,7 +48,7 @@ if (variables == 2){
         };
         LeerMatriz2(Mat2);
         printf("\n");
-        IMPRIMIR2(Mat2);
+        imprimir2(Mat2);
         printf("\n");
         imprimirExpresion2(Mat2, cont);
     

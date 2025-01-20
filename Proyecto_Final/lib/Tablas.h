@@ -11,7 +11,7 @@
 //Calculo con tres variables 
 
 void LeerMatriz2(int nombre[8][4]);  
-void IMPRIMIR2(int matriz[8][4]);
+void imprimir2(int matriz[8][4]);
 void imprimirExpresion2(int nombre[8][4], int *cont);
 void mat2(int matriz1[8][4], int matriz2[8][4]);
 void mat3(int matriz1[8][4], int matriz2[8][4],int matriz3[8][4]);
@@ -24,7 +24,7 @@ int selccion2(int Contador[8], int term);
 void m(int i ,int matriz1[8][4]);
 void r(int i,int matriz1[8][4], int matriz2[8][4]);
 
-void IMPRIMIR2(int matriz[8][4]){
+void imprimir2(int matriz[8][4]){
     int j;
     printf("a b c s\n");
     for (int i = 0; i < 8; i++) {
@@ -68,34 +68,34 @@ void LeerMatriz2(int nombre[8][4]){
    }
 
 void imprimirExpresion2(int nombre[8][4], int *cont) {
-    int firstTerm = 1;
+    int termino = 1;
     int term = 0;
     if (nombre[0][3] == 1) {
         printf("A'*B'*C'");//0
-        firstTerm = 0;
+        termino = 0;
         cont[0] = 1;
         term++;
     }
     if (nombre[1][3] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A'*B'*C");//1
-        firstTerm = 0;
+        termino = 0;
         cont[1] = 1;
         term++;
     }
     if (nombre[2][3] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A'*B*C'");//2
-        firstTerm = 0;
+        termino = 0;
         cont[2] = 1;
         term++;
     }
     if (nombre[3][3] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A'*B*C");//3
@@ -103,34 +103,34 @@ void imprimirExpresion2(int nombre[8][4], int *cont) {
         term++;
     }
     if (nombre[4][3] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A*B'*C'");//4
-        firstTerm = 0;
+        termino = 0;
         cont[4] = 1;
         term++;
     }
     if (nombre[5][3] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A*B'*C");//5
-        firstTerm = 0;
+        termino = 0;
         cont[5] = 1;
         term++;
     }
     if (nombre[6][3] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A*B*C'");//6
-        firstTerm = 0;
+        termino = 0;
         cont[6] = 1;
         term++;
     }
     if (nombre[7][3] == 1) {
-        if (!firstTerm) {
+        if (!termino) {
             printf(" + ");
         }
         printf("A*B*C");//7
@@ -155,7 +155,7 @@ int selccion2(int Contador[8], int term) {
 
     for (int i = 0; i < 8; i++) {
         if (Contador[i] == 1 && term == 1) {
-            IMPRIMIR2(matrices[i]);
+            imprimir2(matrices[i]);
         }
     }
 
