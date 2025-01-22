@@ -8,17 +8,13 @@ int seguir = 1;
 
     
     while (seguir){
-      int variables;
-    printf("MATEMATICAS DISCRETAS 1\n");
-    printf("Ethan Flores y Miguel Ruales\n");
-    printf("En este programa se calcula la expresion booleana con 2 o 3 variables\n");
-    printf("2024/25\n");
+    int variables;
+    inicio();
     do
     {
         printf("Digite el numero de variables logicas, solo 2 o 3:  ");
         scanf("%d",&variables); 
     } while (variables !=2 && variables !=3);
-    
   
 if (variables == 2){
         int cont [4] = {0};

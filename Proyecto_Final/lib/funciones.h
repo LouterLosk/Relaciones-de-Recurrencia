@@ -16,8 +16,11 @@ void remplazar4(int matriz1[4][3], int matriz2[4][3],int matriz3[4][3],int matri
 
 
 void inicio(){
-
-
+    printf("MATEMATICAS DISCRETAS 1\n");
+    printf("Ethan Flores y Miguel Ruales\n");
+    printf("En este programa se calcula la expresion booleana con 2 o 3 variables\n");
+    printf("2024/25\n");
+    
 
 }
 
